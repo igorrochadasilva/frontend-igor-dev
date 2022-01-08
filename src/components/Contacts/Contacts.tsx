@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { useForm } from 'react-hook-form';
 
-const Contacts = () => {
+
+type TFormData = {name: string, phone: string, email: string, subject: string, description: string}
+
+const Contacts: React.FC   = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const { register, handleSubmit, errors } = useForm();
 
@@ -10,7 +13,7 @@ const Contacts = () => {
   const templateID = 'template_cnrxm1m';
   const userID = 'user_71i8cGIfIVtKX7hse4aEV';
 
-  const onSubmit = (data, r) => {
+  const onSubmit = (data:TFormData , formElement: any) => {
     sendEmail(
       serviceID,
       templateID,
@@ -23,15 +26,16 @@ const Contacts = () => {
       },
       userID
     );
-    r.target.reset();
+
+    formElement.target.reset();
   };
 
-  const sendEmail = (serviceID, templateID, variables, userID) => {
+  const sendEmail = (serviceID: string, templateID: string, variables: Object | undefined, userID: string | undefined) => {
     emailjs
       .send(serviceID, templateID, variables, userID)
       .then(() => {
         setSuccessMessage(
-          "Form sent successfully! I'll contact you as soon as possible."
+          "Formulário enviado com sucesso! Estarei entrando em contato em breve, obrigado!"
         );
       })
       .catch((err) => console.error(`Something went wrong ${err}`));
@@ -129,8 +133,7 @@ const Contacts = () => {
             <div className='col-md-6 col-xs-12'>
               {/* DESCRIPTION */}
               <div className='text-center'>
-                <textarea
-                  type='text'
+                <textarea              
                   className='form-control'
                   placeholder='Descreva brevemente seu projeto ...'
                   name='description'

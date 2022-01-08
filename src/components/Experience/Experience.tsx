@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
-const Experience = () => {
+const Experience: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const windowWidth = () => {

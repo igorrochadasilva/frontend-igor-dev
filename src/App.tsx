@@ -29,7 +29,7 @@ function App() {
         <AboutMe />
         <Services />
         <Experience />
-        <Portfolio />
+        <Portfolio /> {/* ver type depois*/}
         <Knowledge />
         <Contacts />
         <Footer />

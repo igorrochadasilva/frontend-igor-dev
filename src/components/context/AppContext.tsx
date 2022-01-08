@@ -1,6 +1,20 @@
 import React, { createContext, useState } from "react";
 import messages_br from "../../messages/texts-pt-br.json"
 
+
+// user props type
+type UserType = {
+  language: string
+  messages: any
+}
+
+// context props type
+type PropsUserContext ={
+  state: UserType,
+  setState: React.Dispatch<React.SetStateAction<UserType>>
+}
+
+//initial state value
 const DEFAULT_VALUE = {
     state: {
         language: "pt-BR",
@@ -9,9 +23,11 @@ const DEFAULT_VALUE = {
     setState: () => {},
 }
 
-const UserContext = createContext(DEFAULT_VALUE);
+//create context
+const UserContext = createContext<PropsUserContext>(DEFAULT_VALUE);
 
-const UserContextProvider = ({ children }) => {
+//function to change language of the context
+const UserContextProvider: React.FC = ({ children }) => {
   const [state, setState] = useState(DEFAULT_VALUE.state);
   return (
     <UserContext.Provider

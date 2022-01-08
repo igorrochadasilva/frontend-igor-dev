@@ -1,7 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions */
-import React, { useEffect } from "react";
+
+import React from "react";
 import Particles from "react-tsparticles";
 
+//particle component to render particles on window
 const ParticlesComponent: React.FC = () => {
     
     return (

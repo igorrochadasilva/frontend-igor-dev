@@ -23,7 +23,7 @@ import iconWebpack from "../../images/logos/icon-webpack.svg";
 
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
-const Knowledge = () => {
+const Knowledge: React.FC = () => {
   return (
     <div id="knowledge" className="knowledge">
       <h1>

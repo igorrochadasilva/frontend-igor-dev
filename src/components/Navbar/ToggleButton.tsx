@@ -7,9 +7,16 @@ import UserContext from "../context/AppContext";
 import messages_br from "../../messages/texts-pt-br.json"
 import messages_en from "../../messages/texts-en.json"
 
-const ToggleButton = (props) => {
-  const [toggle, setToggle] = useState(false);
-  const { defaultChecked, onChange, disabled, className } = props;
+interface IToggleButtonProps{
+  defaultChecked?: boolean
+  onChange?: (status:boolean) => void
+  disabled?: boolean
+  className?: string
+}
+  
+
+const ToggleButton: React.FC <IToggleButtonProps>= ({defaultChecked, onChange, disabled, className}) => {
+  const [toggle, setToggle] = useState(false);  
   
   const {setState: setGlobalState} = useContext(UserContext)
     

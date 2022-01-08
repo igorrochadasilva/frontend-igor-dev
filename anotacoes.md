@@ -21,3 +21,6 @@
 <cite>
 <q>
 <time>
+
+# Fazer depois:
+Componente Porfolio não está typescript porq dependencia react-popupbbox não tem types.

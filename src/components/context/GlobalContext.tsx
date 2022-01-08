@@ -2,7 +2,9 @@ import React from "react";
 
 import { UserContextProvider } from "./AppContext";
 
-const GlobalContext = ({ children }) => {
+
+
+const GlobalContext: React.FC = ({ children }) => {
   return (
     <>
       <UserContextProvider>{children}</UserContextProvider>;

@@ -2,7 +2,7 @@ import React from 'react';
 import Typed from 'react-typed';
 import { Link } from 'react-scroll';
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <div id='home' className='header-wraper'>
       <div className='main-info'>

@@ -4,7 +4,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import author from '../../images/me.jpg';
 
-const AboutMe = () => {
+const AboutMe: React.FC = () => {
   return (
     <>
       <AnimationOnScroll animateIn='animate__fadeInDown' animateOnce={true}>

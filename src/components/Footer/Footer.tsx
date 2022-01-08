@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import { LinkedinShareButton, LinkedinIcon } from 'react-share';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <div className='footer'>
       <div className='container'>
@@ -73,9 +73,7 @@ const Footer = () => {
           <div className='col-lg-2 col-md-2 col-sm-6 align-items-center'>
             <div className='d-flex justify-content-center'>
               <LinkedinShareButton
-                url={'#'}
-                quote={'FullStack Developer'}
-                hashtag='#javascript'
+                url={'#'}          
               >
                 <LinkedinIcon className='mx-3' size={36} />
               </LinkedinShareButton>

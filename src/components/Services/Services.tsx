@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDesktop, faFileCode } from '@fortawesome/free-solid-svg-icons';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
-const Services = () => {
+const Services: React.FC = () => {
   return (
     <div id='services' className='services'>
       <h1 className='py-5'>
