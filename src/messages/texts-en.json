@@ -1,0 +1,21 @@
+{
+  "Navbar": {
+    "text1": "Who I am",
+    "text2": "Knowledge",
+    "text3": "Services",
+    "text4": "Projects",
+    "text5": "Contact"
+  },
+  "Header": {},
+  "AboutMe": {},
+
+  "Services": {},
+
+  "Experience": {},
+  "Portfolio": {},
+  "Knowledge": {},
+
+  "Contacts": {},
+
+  "Footer": {}
+}

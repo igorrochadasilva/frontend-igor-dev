@@ -1,0 +1,28 @@
+{
+  "Navbar": {
+    "text1": "Quem sou",
+    "text2": "Conhecimentos",
+    "text3": "Serviços",
+    "text4": "Projetos",
+    "text5": "Contato"
+  },
+  "Header": {
+    "title": "Olá, eu sou",
+    "typedString1": "Desenvolvedor Web",
+    "typedString2": "Desenvolvedor Vtex",
+    "typedString3": "Desenvolvedor WordPress",
+    "typedString4": "Desenvolvedor React",
+    "button": "contato"
+  },
+  "AboutMe": {},
+
+  "Services": {},
+
+  "Experience": {},
+  "Portfolio": {},
+  "Knowledge": {},
+
+  "Contacts": {},
+
+  "Footer": {}
+}
