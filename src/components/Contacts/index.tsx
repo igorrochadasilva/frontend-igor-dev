@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { useForm } from 'react-hook-form';
 
-
 type TFormData = {name: string, phone: string, email: string, subject: string, description: string}
 
 const Contacts: React.FC   = () => {
@@ -42,7 +41,7 @@ const Contacts: React.FC   = () => {
   };
 
   return (
-    <div id='contacts' className='contacts'>
+    <section id='contacts' className='contacts'>
       <div className='text-center'>
         <h1>
           Contato <span className='dot'>.</span>
@@ -154,7 +153,7 @@ const Contacts: React.FC   = () => {
           </div>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

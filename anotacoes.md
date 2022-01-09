@@ -7,15 +7,15 @@
 
 
 # Tags semanticas essencias para o site. 
-<header>
-<section>
-<article>
-<nav>
-<aside>
+<header> - OK
+<section> - OK
+<article> - OK
+<nav> - OK
+<aside> - OK
 <main> - OK
-<figure>
-<footer>
-<a>
+<figure> - OK
+<footer> - OK
+<a> - OK
 <em>
 <strong>
 <cite>

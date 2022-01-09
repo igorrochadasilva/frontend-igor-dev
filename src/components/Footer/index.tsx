@@ -5,7 +5,7 @@ import { LinkedinShareButton, LinkedinIcon } from 'react-share';
 
 const Footer: React.FC = () => {
   return (
-    <div className='footer'>
+    <footer className='footer'>
       <div className='container'>
         <div className='row'>
           <div className='col-lg-4 col-md-4 col-sm-6'>
@@ -72,11 +72,13 @@ const Footer: React.FC = () => {
           </div>
           <div className='col-lg-2 col-md-2 col-sm-6 align-items-center'>
             <div className='d-flex justify-content-center'>
-              <LinkedinShareButton
-                url={'#'}          
-              >
-                <LinkedinIcon className='mx-3' size={36} />
-              </LinkedinShareButton>
+              <aside>
+                <LinkedinShareButton
+                  url={'#'}          
+                >
+                  <LinkedinIcon className='mx-3' size={36} />
+                </LinkedinShareButton>
+              </aside>
             </div>
             <p className='pt-3 text-center'>
               {/* Copyright&copy; */}
@@ -85,7 +87,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

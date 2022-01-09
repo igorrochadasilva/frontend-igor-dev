@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 
 const Header: React.FC = () => {
   return (
-    <div id='home' className='header-wraper'>
+    <header id='home' className='header-wraper'>
       <div className='main-info'>
         <h1>
           <span>Olá, eu sou </span>Igor Rocha.
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
           contato
         </Link>
       </div>
-    </div>
+    </header>
   );
 };
 

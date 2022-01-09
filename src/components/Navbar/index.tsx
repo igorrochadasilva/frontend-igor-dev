@@ -16,10 +16,12 @@ const Navbar: React.FC = () => {
   const {Navbar} = context.state.messages 
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light">
+    <nav id="navbar" className="navbar navbar-expand-lg navbar-light">
       <div className="container">
         <a className="navbar-brand" href="/">
-          <img className="logo" src={logo} alt="logo..." loading="lazy"/>
+          <figure>
+            <img className="logo" src={logo} alt="logo..." loading="lazy"/>
+          </figure>
         </a>
         <button
           className="navbar-toggler"
