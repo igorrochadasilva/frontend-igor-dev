@@ -39,7 +39,7 @@ const Contacts: React.FC   = () => {
       .send(serviceID, templateID, variables, userID)
       .then(() => {
         setSuccessMessage(
-          "Formulário enviado com sucesso! Estarei entrando em contato em breve, obrigado!"
+          MContacts.form.formSucess
         );
       })
       .catch((err) => console.error(`Something went wrong ${err}`));

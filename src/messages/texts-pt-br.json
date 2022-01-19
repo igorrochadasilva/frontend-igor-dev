@@ -99,7 +99,8 @@
       "sub": "Assunto",
       "subRequired": "OOPS, você se esqueceu de adicionar o assunto.",
       "description": "Descreva brevemente seu projeto ...",
-      "descriptionRequired":"Descreva resumidamente as necessidades do seu projeto ..."
+      "descriptionRequired":"Descreva resumidamente as necessidades do seu projeto ...",
+      "formSucess": "Formulário enviado com sucesso! Estarei entrando em contato em breve, obrigado!"
     },
     "button":"Enviar"
   },

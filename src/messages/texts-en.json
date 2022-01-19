@@ -99,7 +99,8 @@
       "sub": "Subject",
       "subRequired": "OOPS, you forgot to add the subject",
       "description": "Briefly describe your project ...",
-      "descriptionRequired": "Briefly describe your project requirements ..."
+      "descriptionRequired": "Briefly describe your project requirements ...",
+      "formSucess": "Form sent successfully! I will be contacting you soon, thank you!"
     },
     "button":"Send"
   },
