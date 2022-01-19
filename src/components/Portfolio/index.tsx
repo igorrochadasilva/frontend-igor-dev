@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 // FONTAWESOME IMPORTS
 import { faSearchPlus } from "@fortawesome/free-solid-svg-icons";
@@ -21,9 +21,12 @@ import imgCaido from "../../images/projects/caiado-pneus/home.png";
 import imgBardahl from "../../images/projects/bardahl/home.png";
 
 import BoxImage from "./BoxImage";
+import UserContext from "../context/AppContext";
 
 const Pofrfolio = () => {
   
+  const context = useContext(UserContext)
+  const MPortfolios = context.state.messages.Portfolios
   
   // Projeto 1
   const openPopupboxRihappy = () => {
@@ -38,7 +41,7 @@ const Pofrfolio = () => {
         />
         </figure>
         <p className="mt-2">
-          <b>Projeto: </b>Loja de brinquedos Rihappy.
+          <b>{MPortfolios.project} </b>{MPortfolios.project1.text}
         </p>
         <p>
           <b>Link: </b>
@@ -76,7 +79,7 @@ const Pofrfolio = () => {
         />
         </figure>
         <p className="mt-2">
-          <b>Projeto: </b>Loja Vivenda do Camarão.
+          <b>{MPortfolios.project} </b>{MPortfolios.project2.text}
         </p>
         <p>
           <b>Link: </b>
@@ -116,7 +119,7 @@ const Pofrfolio = () => {
         />
         </figure>
         <p className="mt-2">
-          <b>Projeto: </b>Loja Phooto.
+          <b>{MPortfolios.project} </b>{MPortfolios.project3.text}
         </p>
         <p>
           <b>Link: </b>
@@ -154,7 +157,7 @@ const Pofrfolio = () => {
         />
         </figure>
         <p className="mt-2">
-          <b>Projeto: </b>Loja Katmandu.
+          <b>{MPortfolios.project} </b>{MPortfolios.project4.text}
         </p>
         <p>
           <b>Link: </b>
@@ -187,7 +190,7 @@ const Pofrfolio = () => {
         <img className="portfolio-image-popupbox" src={imgSbed} alt="SBED" loading="lazy" />
         </figure>
         <p className="mt-2">
-          <b>Projeto: </b>Site SBED.
+          <b>{MPortfolios.project} </b>{MPortfolios.project5.text}
         </p>
         <p>
           <b>Link: </b>
@@ -225,7 +228,7 @@ const Pofrfolio = () => {
         />
         </figure>
         <p className="mt-2">
-          <b>Projeto: </b>Site São Cristovão.
+          <b>{MPortfolios.project} </b>{MPortfolios.project6.text}
         </p>
         <p>
           <b>Link: </b>
@@ -264,7 +267,7 @@ const Pofrfolio = () => {
         />
         </figure>
         <p className="mt-2">
-          <b>Projeto: </b>Loja Caido Pneus.
+          <b>{MPortfolios.project} </b>{MPortfolios.project7.text}
         </p>
         <p>
           <b>Link: </b>
@@ -303,7 +306,7 @@ const Pofrfolio = () => {
           />
           </figure>
           <p className="mt-2">
-            <b>Projeto: </b>Site Bardahl.
+            <b>{MPortfolios.project} </b>{MPortfolios.project8.text}
           </p>
           <p>
             <b>Link: </b>
@@ -332,7 +335,7 @@ const Pofrfolio = () => {
     <section id="portfolio" className="portfolio-wrapper">
       <div className="container">
         <h1 className="text-center py-5">
-          Portfolio <span className="dot">.</span>
+          {MPortfolios.title} <span className="dot">.</span>
         </h1>
 
         <div className="image-box-wrapper row justify-content-center mb-2">

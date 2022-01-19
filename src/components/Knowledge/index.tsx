@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import Knowledge from "./Knowledge"
 
@@ -18,22 +18,29 @@ import iconWordpress from "../../images/logos/icon-wordpress.svg";
 import iconVtex from "../../images/logos/icon-vtex.svg";
 import iconWebpack from "../../images/logos/icon-webpack.svg";
 
-// import iconRedux from "../../images/logos/icon-redux.svg";
+import iconRedux from "../../images/logos/icon-redux.svg";
+import iconStyledComponent from "../../images/logos/icon-styled-component.svg";
+import iconNext from "../../images/logos/icon-next.svg";
+import iconGraphql from "../../images/logos/icon-graphql.svg";
 // import iconGatsby from "../../images/logos/icon-gatsby.svg";
-// import iconNext from "../../images/logos/icon-next.svg";
-// import iconGraphql from "../../images/logos/icon-graphql.svg";
+ 
+
 
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import UserContext from "../context/AppContext";
 
 const Knowledges: React.FC = () => {
+
+  const context = useContext(UserContext)
+  const MKnowledges = context.state.messages.Knowledges 
 
   return (
     <section id="knowledge" className="knowledge">
       <h1>
-        Conhecimentos <span className="dot">.</span>
+        {MKnowledges.title} <span className="dot">.</span>
       </h1>
       <div className="container">
-        <div className="row justify-content-around cards">
+        <div className="row justify-content-center cards">
           <AnimationOnScroll animateIn="animate__fadeInDown" animateOnce={true}>
             <Knowledge
               icon={iconReact}
@@ -141,6 +148,45 @@ const Knowledges: React.FC = () => {
             <Knowledge
               icon={iconWebpack}
               tecnology="Webpack"                          
+            />           
+          </AnimationOnScroll>
+           <AnimationOnScroll
+            animateIn="animate__fadeInDown"
+            animateOnce={true}            
+          >
+            <Knowledge
+              icon={iconRedux}
+              tecnology="Redux"                          
+            />           
+          </AnimationOnScroll>
+          <AnimationOnScroll
+            animateIn="animate__fadeInDown"
+            animateOnce={true}           
+               delay={100}
+          >
+            <Knowledge
+              icon={iconStyledComponent}
+              tecnology="Styled Components"                          
+            />           
+          </AnimationOnScroll>
+          <AnimationOnScroll
+            animateIn="animate__fadeInDown"
+            animateOnce={true}           
+               delay={200}
+          >
+            <Knowledge
+              icon={iconNext}
+              tecnology="Next"                          
+            />           
+          </AnimationOnScroll>
+          <AnimationOnScroll
+            animateIn="animate__fadeInDown"
+            animateOnce={true}           
+               delay={300}
+          >
+            <Knowledge
+              icon={iconGraphql}
+              tecnology="Graphql"                          
             />           
           </AnimationOnScroll>
         </div>

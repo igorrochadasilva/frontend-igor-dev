@@ -1,20 +1,22 @@
-import React from "react";
+import React, {useContext} from 'react';
+import UserContext from '../context/AppContext';
 
-const About: React.FC = () => (
-    <div className='col-lg-6 col-xm-12'>
-        <h1 className='about-heading'>
-            Quem sou <span className='dot'>.</span>
-        </h1>
-        <p>
-            Meu nome é Igor Rocha, sou Front End Developer,
-            desenvolvo sites e ecommerces de alta qualidade,
-            com foco em responsividade, animações, performace e SEO.
-            Estou sempre buscando se atualizar com as novas tecnologias que surgem,
-            de maneira a sempre inovar e ser mais eficiente. 
+const About: React.FC = () => {
+
+  const context = useContext(UserContext);
+  const MAbout = context.state.messages.AboutMe
   
-        </p>
-    </div>
-)
+    return(
+        <div className='col-lg-6 col-xm-12'>
+            <h1 className='about-heading'>
+               {MAbout.title} <span className='dot'>.</span>
+            </h1>
+            <p>
+                {MAbout.text}
+            </p>
+        </div>
+    )
+}
 
 export default About
 

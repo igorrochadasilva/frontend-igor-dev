@@ -1,9 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import UserContext from "../context/AppContext";
+
 
 import Experience from "./Experience";
 
 const Experiences: React.FC = () => {
+
+  const context = useContext(UserContext)
+  const MExperiences = context.state.messages.Experiences 
+  
   const [isMobile, setIsMobile] = useState(false);
 
   const windowWidth = () => {
@@ -20,7 +26,7 @@ const Experiences: React.FC = () => {
     <section id="experience" className="experience">
       <div className="d-flex justify-content-center my-5">
         <h1>
-          Experiências <span className="dot">.</span>
+          {MExperiences.title} <span className="dot">.</span>
         </h1>
       </div>
       <div className="container experience-wrapper">
@@ -32,8 +38,8 @@ const Experiences: React.FC = () => {
               animateOnce={true}
             >
                 <Experience
-                    year="2018-2019"
-                    text="Desenvolvimento de Landing Pages, manutenção do site, montagem de e-mail-marketing, usabilidade, SEO, melhoria de performance."                    
+                    year={MExperiences.experiece1.year}
+                    text={MExperiences.experiece1.text}                   
                 />
             </AnimationOnScroll>
           </div>
@@ -49,10 +55,8 @@ const Experiences: React.FC = () => {
               animateOnce={true}
             >
                 <Experience
-                    year="2019-2019"
-                    text="Desenvolvimento de sites, ecommerces, blogs, manutenção,
-                        melhorias, configuração de ambientes, migração de sites,
-                        melhoria de performance, semântica."                    
+                    year={MExperiences.experiece2.year}
+                    text={MExperiences.experiece2.text}                     
                 />
             </AnimationOnScroll>
           </div>
@@ -66,12 +70,8 @@ const Experiences: React.FC = () => {
               animateOnce={true}
             >
                 <Experience
-                    year="2019-2021"
-                    text="Desenvolvimento de Landing Pages, criação de novas
-                    funcionalidades para usabilidade, manutenção do ecommerce,
-                    criação de e-mail-marketing, boas práticas, semântica, SEO,
-                    testes A/B, metodologia SCRUM, gerenciamento de versionamento de
-                    código e deploy."                   
+                    year={MExperiences.experiece3.year}
+                    text={MExperiences.experiece3.text}                    
                 />
             </AnimationOnScroll>
           </div>

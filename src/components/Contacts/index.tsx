@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { useForm } from 'react-hook-form';
+import UserContext from '../context/AppContext';
 
 type TFormData = {name: string, phone: string, email: string, subject: string, description: string}
 
 const Contacts: React.FC   = () => {
+  
+  const context = useContext(UserContext)
+  const MContacts = context.state.messages.Contacts 
+  
   const [successMessage, setSuccessMessage] = useState('');
   const { register, handleSubmit, errors } = useForm();
 
@@ -44,11 +49,10 @@ const Contacts: React.FC   = () => {
     <section id='contacts' className='contacts'>
       <div className='text-center'>
         <h1>
-          Contato <span className='dot'>.</span>
+          {MContacts.title} <span className='dot'>.</span>
         </h1>
         <p>
-          Preencha o formulário e descreva as necessidades do seu projeto e
-          entrarei em contato com você o mais breve possível.
+          {MContacts.text}
         </p>
         <span className='success-message'>{successMessage}</span>
       </div>
@@ -61,13 +65,13 @@ const Contacts: React.FC   = () => {
                 <input
                   type='text'
                   className='form-control'
-                  placeholder='Name'
+                  placeholder={MContacts.form.name}
                   name='name'
                   ref={register({
-                    required: 'Por favor, insira seu nome',
+                    required: MContacts.form.nameRequired,
                     maxLength: {
                       value: 20,
-                      message: 'Insira um nome com menos de 20 caracteres',
+                      message: MContacts.form.nameMsg,
                     },
                   })}
                 />
@@ -81,10 +85,14 @@ const Contacts: React.FC   = () => {
                 <input
                   type='text'
                   className='form-control'
-                  placeholder='Telefone'
+                  placeholder={MContacts.form.phone}
                   name='phone'
                   ref={register({
-                    required: 'Por favor, adicione seu número de telefone',
+                    required: MContacts.form.phoneRequired,
+                    pattern: {
+                      value: /^[0-9]+$/,
+                      message: MContacts.form.phoneMsg,
+                    },
                   })}
                 />
                 <div className='line'></div>
@@ -97,13 +105,13 @@ const Contacts: React.FC   = () => {
                 <input
                   type='email'
                   className='form-control'
-                  placeholder='Email'
+                  placeholder={MContacts.form.email}
                   name='email'
                   ref={register({
-                    required: 'Por favor, forneça seu e-mail',
+                    required: MContacts.form.emailRequired,
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: 'invalid Email',
+                      message: MContacts.form.phoneMsg,
                     },
                   })}
                 />
@@ -117,10 +125,10 @@ const Contacts: React.FC   = () => {
                 <input
                   type='text'
                   className='form-control'
-                  placeholder='Assunto'
+                  placeholder={MContacts.form.sub}
                   name='subject'
                   ref={register({
-                    required: 'OOPS, você se esqueceu de adicionar o assunto.',
+                    required: MContacts.form.subRequired,
                   })}
                 />
                 <div className='line'></div>
@@ -134,11 +142,10 @@ const Contacts: React.FC   = () => {
               <div className='text-center'>
                 <textarea              
                   className='form-control'
-                  placeholder='Descreva brevemente seu projeto ...'
+                  placeholder={MContacts.form.description}
                   name='description'
                   ref={register({
-                    required:
-                      'Descreva resumidamente as necessidades do seu projeto ...',
+                    required: MContacts.form.descriptionRequired,
                   })}
                 ></textarea>
                 <div className='line'></div>
@@ -147,7 +154,7 @@ const Contacts: React.FC   = () => {
                 {errors.description && errors.description.message}
               </span>
               <button className='btn-main-offer contact-btn' type='submit'>
-                contate-me
+                {MContacts.button}
               </button>
             </div>
           </div>

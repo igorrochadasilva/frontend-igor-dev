@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { Link } from 'react-scroll';
 import { LinkedinShareButton, LinkedinIcon } from 'react-share';
+import UserContext from '../context/AppContext';
 
 const Footer: React.FC = () => {
+
+ const context = useContext(UserContext)
+ const MContacts = context.state.messages.Footer
+ const MNavbar = context.state.messages.Navbar
+
   return (
     <footer className='footer'>
       <div className='container'>
         <div className='row'>
           <div className='col-lg-4 col-md-4 col-sm-6'>
             <div className='d-flex'>
-              <p>Cidade São Paulo </p>
+              <p>{MContacts.city} São Paulo </p>
             </div>
             <div className='d-flex'>
               <a href='tel:(11) 94967-3001'>(11) 94967-3001</a>
@@ -28,7 +34,7 @@ const Footer: React.FC = () => {
                   offset={-110}
                   className='footer-navk'
                 >
-                  Quem sou
+                  {MNavbar.text1}
                 </Link>
                 <br />
                 <Link
@@ -37,7 +43,7 @@ const Footer: React.FC = () => {
                   offset={-110}
                   className='footer-navk'
                 >
-                  Servicos
+                  {MNavbar.text2}
                 </Link>
                 <br />
                 <Link
@@ -46,7 +52,7 @@ const Footer: React.FC = () => {
                   offset={-110}
                   className='footer-navk'
                 >
-                  Experiencia
+                  {MNavbar.text3}
                 </Link>
               </div>
               <div className='col'>
@@ -56,7 +62,7 @@ const Footer: React.FC = () => {
                   offset={-110}
                   className='footer-navk'
                 >
-                  Portfolio
+                  {MNavbar.text4}
                 </Link>
                 <br />
                 <Link
@@ -65,7 +71,7 @@ const Footer: React.FC = () => {
                   offset={-110}
                   className='footer-navk'
                 >
-                  Conhecimentos
+                  {MNavbar.text5}
                 </Link>
               </div>
             </div>

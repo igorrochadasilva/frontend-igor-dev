@@ -1,16 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React from 'react';
+import React, { useContext } from 'react';
+import UserContext from '../context/AppContext';
 
 import Service from './Service';
 
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { faDesktop, faFileCode, faEnvelope, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
+
 const Services: React.FC = () => {
+  
+  const context = useContext(UserContext)
+  const MServices = context.state.messages.Services
+
   return (
     <section id='services' className='services'>
       <h1 className='py-5'>
-        Serviços <span className='dot'>.</span>
+        {MServices.title} <span className='dot'>.</span>
       </h1>
       <div className='container'>
         <div className='row'>
@@ -21,8 +27,8 @@ const Services: React.FC = () => {
             >
               <Service               
                 icon={faDesktop}
-                title="WebSites"
-                text="Criação de sites responsivos, landing pages, blogs, sites dinânicos."
+                title={MServices.box1.title}
+                text={MServices.box1.text}
               />              
             </AnimationOnScroll>
           </div>
@@ -35,8 +41,8 @@ const Services: React.FC = () => {
             >
               <Service               
                 icon={faShoppingCart}
-                title="Ecommerce"
-                text="Criação de lojas virtuais customizadas, utilizando plataformas como: Vtex."
+                title={MServices.box2.title}
+                text={MServices.box2.text}
               />   
             </AnimationOnScroll>
           </div>
@@ -49,8 +55,8 @@ const Services: React.FC = () => {
             >
               <Service               
                 icon={faFileCode}
-                title="Wordpress"
-                text="Criação e customização de templates, correções e atualizações de plugins."
+                title={MServices.box3.title}
+                text={MServices.box3.text}
               />              
             </AnimationOnScroll>
           </div>
@@ -63,8 +69,8 @@ const Services: React.FC = () => {
             >
               <Service               
                 icon={faEnvelope}
-                title="Email Marketing"
-                text="Desenvolvimento de Email Marketing e templates customizados."
+                title={MServices.box4.title}
+                text={MServices.box4.text}
               />                 
             </AnimationOnScroll>
           </div>

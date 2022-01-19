@@ -14,15 +14,96 @@
     "typedString4": "Desenvolvedor React",
     "button": "contato"
   },
-  "AboutMe": {},
-
-  "Services": {},
-
-  "Experience": {},
-  "Portfolio": {},
-  "Knowledge": {},
-
-  "Contacts": {},
-
-  "Footer": {}
+  "AboutMe": {
+    "title": "Quem sou",
+    "text": "Meu nome é Igor Rocha, sou Front End Developer, desenvolvo sites, blogs e ecommerces de alta qualidade, com foco em performace, responsividade, animações e SEO. Estou sempre buscando se atualizar com as novas tecnologias que surgem, de maneira a sempre inovar e ser mais eficiente."
+  },
+  "Services": {
+    "title": "Serviços",
+    "box1": {
+      "title": "Web Sites",
+      "text": "Criação de sites responsivos, landing pages, blogs, sites dinânicos."
+    },
+    "box2": {
+      "title": "E-commerce",
+      "text": "Criação e desenvolvimento de lojas virtuais customizadas."
+    },
+    "box3": {
+      "title": "Wordpress",
+      "text": "Criação e customização de templates, correções e atualizações de plugins."
+    },
+    "box4": {
+      "title": "Email Marketing",
+      "text": "Desenvolvimento de Email Marketing e templates customizados."
+    }
+  },
+  "Experiences": {
+    "title": "Experiências",
+    "experiece1": {
+      "year": "2018-2019",
+      "text": "Desenvolvimento e manutenção de páginas em Wordpress ou Vtex para Phooto. Desenvolvimento e manutenção de E-mail Marketing. Elaboração de códigos para alterações de páginas de destino de acordo com parâmetros recebidos. Implementação das melhores práticas do SEO."
+    },
+    "experiece2": {
+      "year": "2019-2019",
+      "text": "Desenvolvimento de e-commerce na plataforma VTEX para Katmandu, Vivenda do camarão, Caído Pneus usando HTML5, SCSS, Javascript, jQuery. Desenvolvimento de novas funcionalidades e refatoração de código. Automatização de processos utilizando o Postman Collection Runner. Desenvolvimento e manutenção de websites com Wordpress para São Cristóvão, Saesp e Bardal. Melhoria do desempenho seguindo boas práticas apontadas pelo Google Pagespeed."
+    },
+    "experiece3": {
+      "year": "2019-2021",
+      "text": "Desenvolvimento do e-commerce na plataforma VTEX para Rihappy.com.br utilizando HTML5, SCSS, Javascript, jQuery, Gulp, Babel, Node.js, Webpack, React, Typescript e Graphql. Desenvolvimento de novas funcionalidades e refatoração de código. Automatização de processos usando Postman Collection Runner e Node.js. Versionamento com Bitbucket e Gitlab. Metodologia Scrum. Testes de features, merge e deploy para produção."
+    }
+  },
+  "Portfolios": {
+    "title": "Portfolio",
+    "project": "Projeto",
+    "project1": {      
+      "text": "Projeto: Loja de brinquedos Rihappy."
+    },
+    "project2": {
+      "text": "Projeto: Loja Vivenda do Camarão."
+    },
+     "project3": {      
+      "text": "Projeto: Loja Phooto."
+    },
+     "project4": {      
+      "text": "Projeto: Loja Katmandu."
+    },
+     "project5": {      
+      "text": "Projeto: Site SBED."
+    },
+     "project6": {      
+      "text": "Projeto: Site São Cristovão."
+    },
+     "project7": {      
+      "text": "Projeto: Loja Caido Pneus."
+    },
+     "project8": {      
+      "text": "Projeto: Site Bardahl."
+    }
+  },
+  "Knowledges": {
+    "title": "Conhecimentos"
+  },
+  "Contacts": {
+    "title": "CONTATO",
+    "text": "Preencha o formulário e descreva as necessidades do seu projeto e entrarei em contato com você o mais breve possível.",
+    "form": {
+      "name": "Nome",
+      "nameRequired":"Por favor, insira seu nome",
+      "nameMsg":"Insira um nome com menos de 20 caracteres",
+      "phone": "Telefone",
+      "phoneRequired":"Por favor, adicione seu número de telefone",
+      "phoneMsg": "Telefone inválido",
+      "email": "Email",
+      "emailRequired": "Por favor, forneça seu e-mail",
+      "emailMsg": "Email inválido",
+      "sub": "Assunto",
+      "subRequired": "OOPS, você se esqueceu de adicionar o assunto.",
+      "description": "Descreva brevemente seu projeto ...",
+      "descriptionRequired":"Descreva resumidamente as necessidades do seu projeto ..."
+    },
+    "button":"Enviar"
+  },
+  "Footer": {
+    "city": "Cidade"
+  }
 }

@@ -1,0 +1,20 @@
+.footer {
+  background: var(--primary-black);
+  color: var(--primary-dark-grey);
+  padding: 3rem;
+
+  a {
+    text-decoration: none;
+    color: var(--primary-dark-grey);
+
+    &:hover {
+      text-decoration: none;
+      color: var(--primary-white);
+      cursor: pointer;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}

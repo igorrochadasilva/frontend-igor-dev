@@ -13,7 +13,7 @@ import UserContext from '../context/AppContext';
 const Navbar: React.FC = () => {
   
   const context = useContext(UserContext);
-  const {Navbar} = context.state.messages 
+  const MNavbar = context.state.messages.Navbar
 
   return (
     <nav id="navbar" className="navbar navbar-expand-lg navbar-light">
@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <Link smooth={true} to="about" offset={-110} className="nav-link">
-                {Navbar.text1}
+                {MNavbar.text1}
               </Link>
             </li>
             <li className="nav-item">
@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
                 className="nav-link"
                 href="#"
               >
-                {Navbar.text2}
+                {MNavbar.text2}
               </Link>
             </li>
             <li className="nav-item">
@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
                 offset={-110}
                 className="nav-link"
               >
-                {Navbar.text3}
+                {MNavbar.text3}
               </Link>
             </li>
             <li className="nav-item">
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
                 offset={-110}
                 className="nav-link"
               >
-                {Navbar.text4}
+                {MNavbar.text4}
               </Link>
             </li>
 
@@ -81,7 +81,7 @@ const Navbar: React.FC = () => {
                 offset={-110}
                 className="nav-link"
               >
-                {Navbar.text5}
+                {MNavbar.text5}
               </Link>
             </li>
             <li>
