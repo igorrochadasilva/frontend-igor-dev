@@ -255,7 +255,7 @@ const Pofrfolio = () => {
 
   // Projeto 7
   const openPopupboxCaiado = () => {
-      console.log('Open Popup sem o cara')
+      
     const content = (
       <>
         <figure>
@@ -294,7 +294,7 @@ const Pofrfolio = () => {
 
   // Projeto 8
   const openPopupboxBardahl = () => {
-    console.log('Open Popup com usecallback')
+    
     const content = (
         <>
           <figure>

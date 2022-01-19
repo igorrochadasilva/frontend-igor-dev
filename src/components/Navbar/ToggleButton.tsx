@@ -19,18 +19,13 @@ const ToggleButton: React.FC <IToggleButtonProps>= ({defaultChecked, onChange, d
   const [toggle, setToggle] = useState(false);  
   
   const {setState: setGlobalState} = useContext(UserContext)
-    
-  useEffect(() => {
-    if (defaultChecked) {
-      setToggle(defaultChecked);
-    }
-  }, [defaultChecked]);
-
+  
+  //change languag
   const triggerToggle = () => {
     if (disabled) {
       return;
     }
-    console.log(toggle)
+    
     setToggle(!toggle);
     setGlobalState({language: toggle ? 'pt-BR' : 'en-US', messages: toggle ? messages_br : messages_en})
 
@@ -38,7 +33,8 @@ const ToggleButton: React.FC <IToggleButtonProps>= ({defaultChecked, onChange, d
       onChange(!toggle);
     }
   };
-
+  
+  //toggle style change
   const toggleClasses = classNames(
     "wrg-toggle",
     {
@@ -47,6 +43,13 @@ const ToggleButton: React.FC <IToggleButtonProps>= ({defaultChecked, onChange, d
     },
     className
   );
+  
+  //toggle default value
+  useEffect(() => {
+    if (defaultChecked) {
+      setToggle(defaultChecked);
+    }
+  }, [defaultChecked]);
 
   return (
     <div onClick={triggerToggle} className={toggleClasses}>
