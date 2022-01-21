@@ -5,8 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css/animate.min.css';
 
 import ParticlesComponent from './components/Particles';
-import Navbar from './components/Navbar';
 import Header from './components/Header';
+import Home from './components/Home';
 import AboutMe from './components/AboutMe';
 import Services from './components/Services';
 import Experience from './components/Experience/';
@@ -24,8 +24,8 @@ function App() {
     <>
       <ParticlesComponent />
       <GlobalContext>
-        <Navbar />
-        <Header />        
+        <Header />
+        <Home />        
         <AboutMe />
         <Services />
         <Experience />        

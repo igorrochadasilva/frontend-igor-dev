@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
             <div className='d-flex justify-content-center'>
               <aside>
                 <LinkedinShareButton
-                  url={'#'}          
+                  url={'https://www.linkedin.com/in/igor-rocha-silva/'}          
                 >
                   <LinkedinIcon className='mx-3' size={36} />
                 </LinkedinShareButton>

@@ -1,66 +1,47 @@
-/************************ HEADER *********************************/
 
-.header-wraper {
-  position: relative;
-  height: 100vh;
-  
-    &::after {
-        content: " ";
-        display: block;
-        height: 100%;
-        background-position: top;
-        background-image: url(../../src/images/backgrounc-section-1.svg);
-        background-repeat: no-repeat;
-        filter: invert(16%) sepia(89%) saturate(4331%) hue-rotate(329deg) brightness(87%) contrast(83%);
+
+#navbar {
+    background-color: var(--primary-dark) !important;
+    z-index: 2;
+        
+    .navbar-brand {
+        max-width: 17.25rem;
+        padding: 0 !important;
+        height: 4rem;
+        display: flex !important;
+        align-items: center;
+      
+        figure{
+            margin: auto; 
+            
+            .logo {
+                width: 5.25rem;
+            }   
+        }
+    } 
+    
+    ul li {
+        text-transform: uppercase;
+        
+        a{
+            margin-right: 0.75rem;
+            margin-left: 0.75rem;
+            color: var(--primary-white) !important;
+            border-top: 0.1875rem solid var(--primary-dark);
+            font-size: 0.8rem;
+            letter-spacing: 0.0375rem;
+            cursor: pointer;
+            
+            &.active, &:focus,&:hover{
+              border-top: 0.1875rem solid var(--primary-pink);
+            }
+        }
     }
 }
 
-.main-info {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 1;
-  
-    h1{
-        color: var(--primary-white);
-        span {
-            color: var(--primary-white);        
-            font-size: 1.5rem;
-            text-transform: initial;
-        }
-    } 
-}
-
-/*-------- TYPED TEXT ---------------*/
-.typed-text {
-  font-size: 2rem;
-  color: var(--primary-white);
-}
-
-.typed-cursor {
-  color: var(--primary-pink);
-}
-
-@media (max-width: 768px) {
-  .main-info h1 {
-    font-size: 1.7rem !important;
-  }
-  .typed-text {
-    font-size: 1.3rem !important;
+@media all and (max-width: 768px) {
+  .navbar-brand {
+    width: 7rem;
   }
 }
 
-
-/*-------- PARTICLES JS ---------------*/
-#tsparticles canvas {
-  position: absolute !important;
-  height: 100vh !important;
-  z-index: 1 !important;
-}
