@@ -8,17 +8,18 @@ import { PopupboxManager} from "react-popupbox";
 import PopupboxContainers from "./PopupboxContainer"
 import "react-popupbox/dist/react-popupbox.css";
 
+
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
-import imgRihappy from "../../images/projects/rihappy/home.png";
-import imgVivenda from "../../images/projects/vivenda-do-caramao/home.png";
-import imgPhooto from "../../images/projects/phooto/home.png";
-import imgKatmandu from "../../images/projects/katmandu/home.png";
+import imgRihappy from "../../images/projects/rihappy/home.webp";
+import imgVivenda from "../../images/projects/vivenda-do-caramao/home.webp";
+import imgPhooto from "../../images/projects/phooto/home.webp";
+import imgKatmandu from "../../images/projects/katmandu/home.webp";
 
-import imgSbed from "../../images/projects/sbed/home.png";
-import imgSaoCristovao from "../../images/projects/sao-cristovao/home.png";
-import imgCaido from "../../images/projects/caiado-pneus/home.png";
-import imgBardahl from "../../images/projects/bardahl/home.png";
+import imgSbed from "../../images/projects/sbed/home.webp";
+import imgSaoCristovao from "../../images/projects/sao-cristovao/home.webp";
+import imgCaido from "../../images/projects/caiado-pneus/home.webp";
+import imgBardahl from "../../images/projects/bardahl/home.webp";
 
 import BoxImage from "./BoxImage";
 import UserContext from "../context/AppContext";

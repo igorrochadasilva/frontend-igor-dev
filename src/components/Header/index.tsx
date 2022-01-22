@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import logo from '../../images/logos/logoIgor.png';
 import { Link } from 'react-scroll';
 
@@ -14,6 +14,10 @@ const Header: React.FC = () => {
   
   const context = useContext(UserContext);
   const MNavbar = context.state.messages.Navbar
+  
+  const [menu, SetMenu] = useState(false)
+  
+  const openMenu = () => SetMenu(!menu)
 
   return (
   <header>
@@ -21,7 +25,7 @@ const Header: React.FC = () => {
       <div className="container">
         <a className="navbar-brand" href="/">
           <figure>
-            <img className="logo" src={logo} alt="logo..." loading="lazy"/>
+            <img className="logo" src={logo} alt="logo..." loading="lazy" width="84px" height="59px"/>
           </figure>
         </a>
         <button
@@ -31,12 +35,13 @@ const Header: React.FC = () => {
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation"
+          aria-label="Toggle navigation"    
+          onClick={openMenu}
         >
           <FontAwesomeIcon icon={faBars} style={{ color: "#fff" }} />
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className={`collapse navbar-collapse  ${menu && `show`}`} id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <Link smooth={true} to="about" offset={-110} className="nav-link">

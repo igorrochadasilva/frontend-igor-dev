@@ -1,39 +1,41 @@
-import React from 'react'
+import * as React from 'react'
 
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css/animate.min.css';
 
-import ParticlesComponent from './components/Particles';
-import Header from './components/Header';
-import Home from './components/Home';
-import AboutMe from './components/AboutMe';
-import Services from './components/Services';
-import Experience from './components/Experience/';
-import Portfolio from './components/Portfolio';
-import Knowledge from './components/Knowledge';
-import Contacts from './components/Contacts';
-import Footer from './components/Footer';
+import ParticlesComponent from "./components/Particles"
 
-import GlobalContext from "./components/context/GlobalContext";
 
+const GlobalContext = React.lazy(() => import("./components/context/GlobalContext"));
+const Header = React.lazy(() => import("./components/Header"));
+const Home = React.lazy(() => import("./components/Home"));
+const AboutMe = React.lazy(() => import("./components/AboutMe"));
+const Services = React.lazy(() => import("./components/Services"));
+const Experience = React.lazy(() => import("./components/Experience/"));
+const Portfolio = React.lazy(() => import("./components/Portfolio"));
+const Knowledge = React.lazy(() => import("./components/Knowledge"));
+const Contacts = React.lazy(() => import("./components/Contacts"));
+const Footer = React.lazy(() => import("./components/Footer"));
 
 function App() {
 
   return (
     <>
       <ParticlesComponent />
-      <GlobalContext>
-        <Header />
-        <Home />        
-        <AboutMe />
-        <Services />
-        <Experience />        
-        <Portfolio /> 
-        <Knowledge />
-        <Contacts />
-        <Footer />
-      </GlobalContext>
+      <React.Suspense fallback={<div>Carregando...</div>}>        
+        <GlobalContext>
+          <Header />
+          <Home />        
+          <AboutMe />
+          <Services />
+          <Experience />        
+          <Portfolio /> 
+          <Knowledge />
+          <Contacts />
+          <Footer />
+        </GlobalContext>
+      </React.Suspense>
     </>
   );
 }

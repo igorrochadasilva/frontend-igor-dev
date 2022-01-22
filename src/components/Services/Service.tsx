@@ -21,7 +21,7 @@ const Service: React.FC <IService> = ({icon, title, text}) => {
                     size='2x'
                 />
             </div>
-            <h3>{title}</h3>
+            <h2>{title}</h2>
             <p>
                 {text}
             </p>

@@ -56,12 +56,12 @@ const ToggleButton: React.FC <IToggleButtonProps>= ({defaultChecked, onChange, d
       <div className="wrg-toggle-container">
         <div className="wrg-toggle-check">
           <span>
-            <img src={iconBra} alt="Portugues" loading="lazy"/>
+            <img src={iconBra} alt="Portugues" loading="lazy" width="16px" height="16px"/>
           </span>
         </div>
         <div className="wrg-toggle-uncheck">
           <span>
-            <img src={iconUsa} alt="Inglês" loading="lazy"/>
+            <img src={iconUsa} alt="Inglês" loading="lazy" width="16px" height="16px"/>
           </span>
         </div>
       </div>
