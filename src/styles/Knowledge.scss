@@ -21,10 +21,12 @@
       justify-content: center;
       transition: 0.3s all ease-in-out;
       margin: 20px;
-
-      &:hover {
-        transform: scale(1.1);
-      }
+      
+      @media all and(min-width: 490px) {
+        &:hover {
+          transform: scale(1.1);
+        }    
+      }   
 
       &__icon {
         padding-bottom: 15px;
