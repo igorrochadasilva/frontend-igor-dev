@@ -41,15 +41,34 @@
     "title": "Experiences",
     "experiece1": {
       "year": "2018-2019",
-      "text": "Development and maintenance of pages in Wordpress or Vtex for Phooto. Development and maintenance of E-mail Marketing. Development of codes for landing page changes according to parameters received. Implementation of SEO best practices."
+      "text": [
+      "Development and maintenance of pages in Wordpress or Vtex for Phooto.",
+      "Development and maintenance of E-mail Marketing.",
+      "Development of codes for landing page changes according to parameters received.",
+      "Implementation of SEO best practices."
+      ]
     },
     "experiece2": {
       "year": "2019-2019",
-      "text": "Development of e-commerce on the VTEX platform for Katmandu, Vivenda do camarão, Caído Pneus using HTML5, SCSS, Javascript, jQuery. Development of new features and code refactoring. Process automation using Postman Collection Runner. Development and maintenance of websites with Wordpress for São Cristóvão, Saesp and Bardal. Performance improvement following best practices pointed by Google Pagespeed. Translated with www.DeepL.com/Translator (free version)"
+      "text": [
+        "Development of e-commerce on the VTEX platform for Katmandu, Vivenda do camarão, Caído Pneus using HTML5, SCSS, Javascript, jQuery.",
+        "Development of new features and code refactoring.",
+        "Process automation using Postman Collection Runner.",
+        "Development and maintenance of websites with Wordpress for São Cristóvão, Saesp and Bardal.",
+        "Performance improvement following best practices pointed by Google Pagespeed.",
+        "Translated with www.DeepL.com/Translator (free version)."
+      ]
     },
     "experiece3": {
       "year": "2019-2021",
-      "text": "Development of e-commerce on the VTEX platform for Rihappy.com.br using HTML5, SCSS, Javascript, jQuery, Gulp, Babel, Node.js, Webpack, React, Typescript and Graphql. Development of new features and code refactoring. Process automation using Postman Collection Runner and Node.js. Versioning with Bitbucket and Gitlab. Scrum methodology. Feature testing, merge and deploy to production."
+      "text":[
+        "Development of e-commerce on the VTEX platform for Rihappy.com.br using HTML5, SCSS, Javascript, jQuery, Gulp, Babel, Node.js, Webpack, React, Typescript and Graphql.",
+        "Development of new features and code refactoring.",
+        "Process automation using Postman Collection Runner and Node.js.",
+        "Versioning with Bitbucket and Gitlab.",
+        "Scrum methodology.", 
+        "Feature testing, merge and deploy to production."
+      ]
     }
   },
   "Portfolios": {
