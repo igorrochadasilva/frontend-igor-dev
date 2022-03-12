@@ -14,7 +14,7 @@ const Experience: React.FC <IExperience> = ({year, text}) => {
 
   return(
     <>
-      <h3>{year}</h3>
+      <h2>{year}</h2>
       {renderExperience()}
     </>
   )

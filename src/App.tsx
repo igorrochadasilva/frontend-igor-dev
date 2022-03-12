@@ -4,10 +4,8 @@ import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-import ParticlesComponent from "./components/Particles"
-
-
 const GlobalContext = React.lazy(() => import("./components/context/GlobalContext"));
+const BackgroundAnimation = React.lazy(() => import("./components/BackgroundAnimation"));
 const Header = React.lazy(() => import("./components/Header"));
 const Home = React.lazy(() => import("./components/Home"));
 const AboutMe = React.lazy(() => import("./components/AboutMe"));
@@ -21,9 +19,9 @@ const Footer = React.lazy(() => import("./components/Footer"));
 function App() {
 
   return (
-    <>
-      <ParticlesComponent />
+    <>      
       <React.Suspense fallback={<div>Carregando...</div>}>        
+        <BackgroundAnimation />
         <GlobalContext>
           <Header />
           <Home />        

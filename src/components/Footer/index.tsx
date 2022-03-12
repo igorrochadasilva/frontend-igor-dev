@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
             <div className='d-flex justify-content-center'>
               <aside className='icon-linkedin'>
                 <a href="https://www.linkedin.com/in/igor-rocha-silva/" target="_blank" rel="noreferrer">
-                  {iconLinkedin}
+                  {iconLinkedin} Linkedin
                 </a>                
               </aside>
             </div>
