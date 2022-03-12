@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 // FONTAWESOME IMPORTS
-import { faSearchPlus } from "@fortawesome/free-solid-svg-icons";
+import { iconSearch } from "../icons/Icons";
 
 // REACT POPUPBOX
 import { PopupboxManager} from "react-popupbox";
@@ -343,7 +343,7 @@ const Pofrfolio = () => {
           <AnimationOnScroll animateIn="animate__fadeInDown" animateOnce={true}>            
             <BoxImage
               alt="Site Ri Happy"
-              icon={faSearchPlus}
+              icon={iconSearch}
               imgSrc={imgRihappy}
               openPopupbox={openPopupboxRihappy}
             />
@@ -356,7 +356,7 @@ const Pofrfolio = () => {
           >            
             <BoxImage
               alt="Site Vivenda do Camarão"
-              icon={faSearchPlus}
+              icon={iconSearch}
               imgSrc={imgVivenda}
               openPopupbox={openPopupboxVivenda}
             />
@@ -369,7 +369,7 @@ const Pofrfolio = () => {
           >           
             <BoxImage
               alt="Site Phooto"
-              icon={faSearchPlus}
+              icon={iconSearch}
               imgSrc={imgPhooto}
               openPopupbox={openPopupboxPhooto}
             /> 
@@ -382,7 +382,7 @@ const Pofrfolio = () => {
           >          
             <BoxImage
               alt="Site Katmandu"
-              icon={faSearchPlus}
+              icon={iconSearch}
               imgSrc={imgKatmandu}
               openPopupbox={openPopupboxKatmandu}
             />  
@@ -395,7 +395,7 @@ const Pofrfolio = () => {
           >            
             <BoxImage
               alt="Site SBED"
-              icon={faSearchPlus}
+              icon={iconSearch}
               imgSrc={imgSbed}
               openPopupbox={openPopupboxSbed}
             />  
@@ -408,7 +408,7 @@ const Pofrfolio = () => {
           >            
             <BoxImage
               alt="Site São Cristovão"
-              icon={faSearchPlus}
+              icon={iconSearch}
               imgSrc={imgSaoCristovao}
               openPopupbox={openPopupboxSaoCristovao}
             />  
@@ -421,7 +421,7 @@ const Pofrfolio = () => {
           >                      
             <BoxImage
               alt="Caiado Pneus"
-              icon={faSearchPlus}
+              icon={iconSearch}
               imgSrc={imgCaido}
               openPopupbox={openPopupboxCaiado}
             />  
@@ -434,7 +434,7 @@ const Pofrfolio = () => {
           >
             <BoxImage
               alt="Bardahl"
-              icon={faSearchPlus}
+              icon={iconSearch}
               imgSrc={imgBardahl}
               openPopupbox={openPopupboxBardahl}
             />          

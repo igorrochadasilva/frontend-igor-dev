@@ -2,7 +2,6 @@ import React, {useContext} from 'react';
 import UserContext from '../context/AppContext';
 
 import Typed from 'react-typed';
-import { Link } from 'react-scroll';
 
 const Home: React.FC = () => {
 
@@ -28,14 +27,9 @@ const Home: React.FC = () => {
           backSpeed={60}
           loop
         />
-        <Link
-          smooth={true}
-          to='contacts'
-          offset={-110}
-          className='btn-main-offer'
-        >
+        <a className='btn-main-offer' href='#contacts'>
           {MHome.button}
-        </Link>
+        </a>
       </div>
     </section>
   );
