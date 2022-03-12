@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'animate.css/animate.min.css';
+
 
 import ParticlesComponent from "./components/Particles"
 
