@@ -11,6 +11,10 @@
 @import "./styles/Contact.scss";
 @import "./styles/Footer.scss";
 
+html{
+  scroll-behavior: smooth;
+}
+
 /**/
 :root {
   --primary-bg-black: #151719;

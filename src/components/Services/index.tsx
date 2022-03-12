@@ -5,7 +5,7 @@ import UserContext from '../context/AppContext';
 import Service from './Service';
 
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { faDesktop, faFileCode, faEnvelope, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { iconCart, iconCode, iconDesktop, iconMail } from '../icons/Icons';
 
 
 const Services: React.FC = () => {
@@ -26,7 +26,7 @@ const Services: React.FC = () => {
               animateOnce={true}
             >
               <Service               
-                icon={faDesktop}
+                icon={iconDesktop}
                 title={MServices.box1.title}
                 text={MServices.box1.text}
               />              
@@ -40,7 +40,7 @@ const Services: React.FC = () => {
               delay={100}
             >
               <Service               
-                icon={faShoppingCart}
+                icon={iconCart}
                 title={MServices.box2.title}
                 text={MServices.box2.text}
               />   
@@ -54,7 +54,7 @@ const Services: React.FC = () => {
               delay={200}
             >
               <Service               
-                icon={faFileCode}
+                icon={iconCode}
                 title={MServices.box3.title}
                 text={MServices.box3.text}
               />              
@@ -68,7 +68,7 @@ const Services: React.FC = () => {
               delay={300}
             >
               <Service               
-                icon={faEnvelope}
+                icon={iconMail}
                 title={MServices.box4.title}
                 text={MServices.box4.text}
               />                 

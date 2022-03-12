@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
 
-import { Link } from 'react-scroll';
-import { LinkedinShareButton, LinkedinIcon } from 'react-share';
 import UserContext from '../context/AppContext';
+import { iconLinkedin } from '../icons/Icons';
 
 const Footer: React.FC = () => {
 
@@ -28,62 +27,35 @@ const Footer: React.FC = () => {
           <div className='col-lg-6 col-md-6 col-sm-6'>
             <div className='row'>
               <div className='col'>
-                <Link
-                  smooth={true}
-                  to='about'
-                  offset={-110}
-                  className='footer-navk'
-                >
-                  {MNavbar.text1}
-                </Link>
+                <a href="#about">
+                    {MNavbar.text1}
+                </a>                                
                 <br />
-                <Link
-                  smooth={true}
-                  to='about'
-                  offset={-110}
-                  className='footer-navk'
-                >
+                <a href="#knowledge">
                   {MNavbar.text2}
-                </Link>
+                </a>
                 <br />
-                <Link
-                  smooth={true}
-                  to='about'
-                  offset={-110}
-                  className='footer-navk'
-                >
+                <a href="#services">
                   {MNavbar.text3}
-                </Link>
+                </a>
               </div>
               <div className='col'>
-                <Link
-                  smooth={true}
-                  to='about'
-                  offset={-110}
-                  className='footer-navk'
-                >
+                <a href="#portfolio">
                   {MNavbar.text4}
-                </Link>
+                </a>
                 <br />
-                <Link
-                  smooth={true}
-                  to='about'
-                  offset={-110}
-                  className='footer-navk'
-                >
+                <a href="#contacts">
                   {MNavbar.text5}
-                </Link>
+                </a>
               </div>
             </div>
           </div>
           <div className='col-lg-2 col-md-2 col-sm-6 align-items-center'>
             <div className='d-flex justify-content-center'>
-              <aside>
-                <LinkedinShareButton
-                  url={'https://www.linkedin.com/in/igor-rocha-silva/'}          
-                >
-                  <LinkedinIcon className='mx-3' size={36} />
-                </LinkedinShareButton>
+              <aside className='icon-linkedin'>
+                <a href="https://www.linkedin.com/in/igor-rocha-silva/" target="_blank" rel="noreferrer">
+                  {iconLinkedin}
+                </a>                
               </aside>
             </div>
             <p className='pt-3 text-center'>

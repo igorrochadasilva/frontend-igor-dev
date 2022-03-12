@@ -37,6 +37,12 @@
             }
         }
     }
+    
+    .navbar-toggler svg{
+      width: 30px;
+      height: 30px;
+      color: #fff;
+    }
 }
 
 @media all and (max-width: 768px) {

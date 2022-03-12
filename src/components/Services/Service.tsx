@@ -1,11 +1,6 @@
-import React from 'react'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {IconDefinition } from '@fortawesome/free-solid-svg-icons';
-
-
+import React, { ReactElement } from 'react'
 interface IService{
-    icon: IconDefinition
+    icon: ReactElement
     title: string
     text: string
 }
@@ -15,11 +10,7 @@ const Service: React.FC <IService> = ({icon, title, text}) => {
     return(
         <div className='box'>
             <div className='circle'>
-                <FontAwesomeIcon
-                    className='icon'
-                    icon={icon}
-                    size='2x'
-                />
+                {icon}
             </div>
             <h2>{title}</h2>
             <p>

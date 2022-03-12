@@ -84,10 +84,14 @@
 }
 
 /*------------------ INPUTS -------------------------------*/
+.btn-main-offer{
+  text-decoration: none;
+}
+
 .btn-main-offer.contact-btn {
   background-color: var(--primary-pink);
   transform: 1s;
-
+  
   &:hover {
     background-color: var(--primary-hard-pink);
     transform: 1s;

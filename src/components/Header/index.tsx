@@ -1,11 +1,7 @@
 import React, {useContext, useState} from 'react';
 import logo from '../../images/logos/logoIgor.png';
-import { Link } from 'react-scroll';
 
-// REACT FONTAWESOME IMPORTS
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-
+import { iconMenu } from '../icons/Icons';
 
 import ToggleButton from './ToggleButton';
 import UserContext from '../context/AppContext';
@@ -13,7 +9,7 @@ import UserContext from '../context/AppContext';
 const Header: React.FC = () => {
   
   const context = useContext(UserContext);
-  const MNavbar = context.state.messages.Navbar
+  const MNavbar = context.state.messages.Navbar    
   
   const [menu, SetMenu] = useState(false)
   
@@ -38,57 +34,36 @@ const Header: React.FC = () => {
           aria-label="Toggle navigation"    
           onClick={openMenu}
         >
-          <FontAwesomeIcon icon={faBars} style={{ color: "#fff" }} />
+          {iconMenu}
         </button>
 
         <div className={`collapse navbar-collapse  ${menu && `show`}`} id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <Link smooth={true} to="about" offset={-110} className="nav-link">
+              <a className="nav-link" href="#about">
                 {MNavbar.text1}
-              </Link>
+              </a>                                                  
             </li>
             <li className="nav-item">
-              <Link
-                smooth={true}
-                to="services"
-                offset={-110}
-                className="nav-link"
-                href="#"
-              >
+              <a className="nav-link" href="#knowledge">
                 {MNavbar.text2}
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link
-                smooth={true}
-                to="experience"
-                offset={-110}
-                className="nav-link"
-              >
+              <a className="nav-link" href="#services">
                 {MNavbar.text3}
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link
-                smooth={true}
-                to="portfolio"
-                offset={-110}
-                className="nav-link"
-              >
+              <a className="nav-link" href="#portfolio">
                 {MNavbar.text4}
-              </Link>
+              </a>
             </li>
 
             <li className="nav-item">
-              <Link
-                smooth={true}
-                to="contacts"
-                offset={-110}
-                className="nav-link"
-              >
+              <a className="nav-link" href="#contacts">
                 {MNavbar.text5}
-              </Link>
+              </a>
             </li>
             <li>
               <div className="main-wrg-toggle">

@@ -1,7 +1,4 @@
-import React from "react";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import React, { ReactElement } from "react";
 
 import LazyLoad from 'react-lazyload';
 
@@ -9,7 +6,7 @@ interface IImages {
     imgSrc: string
     alt: string
     openPopupbox: () => void
-    icon: IconDefinition
+    icon: ReactElement;
 }
 
 const BoxImage: React.FC <IImages> = ({imgSrc, alt, openPopupbox, icon}) => (
@@ -27,7 +24,7 @@ const BoxImage: React.FC <IImages> = ({imgSrc, alt, openPopupbox, icon}) => (
             </LazyLoad>
             
             <div className="overflow"></div>
-            <FontAwesomeIcon className="portfolio-icon" icon={icon} />
+            {icon}
         </figure>
     </div>
 )
