@@ -19,7 +19,7 @@ const Footer = React.lazy(() => import("./components/Footer"));
 function App() {
 
   return (
-    <>      
+    <div>      
       <React.Suspense fallback={<div>Carregando...</div>}>        
         <BackgroundAnimation />
         <GlobalContext>
@@ -34,8 +34,8 @@ function App() {
           <Footer />
         </GlobalContext>
       </React.Suspense>
-    </>
-  );
+    </div>
+  )
 }
 
 export default App;

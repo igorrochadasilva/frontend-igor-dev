@@ -49,17 +49,16 @@ const Footer: React.FC = () => {
                 >
                   {iconLinkedin} Linkedin
                 </a>
-              </aside>
-            </div>
-            <p className="pt-3 text-center">
-              Copyright&copy;
-              {new Date().getFullYear()}&nbsp; Igor Rocha.{"}"}
-            </p>
+                <p className="pt-3 text-center">
+                  &copy; {new Date().getFullYear()}&nbsp; Igor Rocha.
+                </p>
+              </aside>              
+            </div>            
           </div>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
 export default Footer;

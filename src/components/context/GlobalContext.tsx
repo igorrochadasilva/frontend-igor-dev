@@ -7,7 +7,7 @@ import { UserContextProvider } from "./AppContext";
 const GlobalContext: React.FC = ({ children }) => {
   return (
     <>
-      <UserContextProvider>{children}</UserContextProvider>;
+      <UserContextProvider>{children}</UserContextProvider>
     </>
   );
 };
