@@ -40,14 +40,15 @@ const Footer: React.FC = () => {
             </div>
           </div>
           <div className="col-lg-2 col-md-2 col-sm-6 align-items-center">
-            <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-left">
               <aside className="icon-linkedin">
                 <a
                   href="https://www.linkedin.com/in/igor-rocha-silva/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {iconLinkedin} Linkedin
+                  {iconLinkedin} 
+                  <span>Linkedin</span>
                 </a>
                 <p className="pt-3 text-center">
                   &copy; {new Date().getFullYear()}&nbsp; Igor Rocha.
