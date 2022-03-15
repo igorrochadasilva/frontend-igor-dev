@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
                   {iconLinkedin} 
                   <span>Linkedin</span>
                 </a>
-                <p className="pt-3 text-center">
+                <p className="text-center">
                   &copy; {new Date().getFullYear()}&nbsp; Igor Rocha.
                 </p>
               </aside>              
