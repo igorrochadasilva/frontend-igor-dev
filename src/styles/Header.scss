@@ -2,7 +2,9 @@
 
 #navbar {
     background-color: var(--primary-dark) !important;
-    z-index: 2;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
         
     .navbar-brand {
         max-width: 17.25rem;
